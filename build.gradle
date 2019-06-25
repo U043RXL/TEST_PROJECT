@@ -82,12 +82,14 @@ bootJar {
 group 'hello'
 version = '1.0-SNAPSHOT'
 
+ext {
+    jarToPublish = file( 'HelloWorld.jar' )
+}
+
 publishing {
     publications {
         maven(MavenPublication) {
-            artifact('artifact.zip') {
-                extension 'zip'
-            }
+             artifact jarToPublish
         }
     }
     repositories {
