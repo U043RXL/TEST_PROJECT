@@ -16,7 +16,3 @@ include 'services:webservice'
 */
 
 rootProject.name = 'HelloWorld'
-externalVersion='1.0-SNAPSHOT'
-deployRepoUrl='http://localhost:8082/repository/nexus_repo/'
-deployRepoUsername='admin'
-deployRepoPassword='admin123'
