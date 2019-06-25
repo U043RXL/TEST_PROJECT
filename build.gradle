@@ -93,13 +93,14 @@ publishing {
     repositories {
         maven {
             name 'deploy'
-            url deployRepoUrl
+            url 'http://localhost:8082/repository/nexus_repo/'
             credentials {
-                username = deployRepoUsername
-                password = deployRepoPassword
+                username = 'admin'
+                password = 'admin123'
             }
         }
     }
 }
+
 
 
