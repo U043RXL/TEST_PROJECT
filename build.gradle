@@ -80,7 +80,7 @@ bootJar {
 //apply plugin: 'maven-publish'
 
 group 'hello'
-version =externalVersion
+version = '1.0-SNAPSHOT'
 
 publishing {
     publications {
