@@ -21,7 +21,7 @@ public class AppTest {
 
     @Test
     public void helloGradle() throws Exception {
-        mvc.perform(get("/"))
+        mvc.perform(get("/hello"))
             .andExpect(status().isOk())
             .andExpect(content().string("Hello Gradle!"));
     }

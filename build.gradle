@@ -10,6 +10,7 @@
 //apply plugin: 'java-library'
 
 plugins {
+    id 'maven-publish'
 	id 'java-library'
     id 'java'
     id 'com.gradle.build-scan' version '2.0.2'
@@ -76,6 +77,29 @@ bootJar {
     mainClassName = 'hello.App'
 }
 
+//apply plugin: 'maven-publish'
 
+group 'hello'
+version =externalVersion
+
+publishing {
+    publications {
+        maven(MavenPublication) {
+            artifact('artifact.zip') {
+                extension 'zip'
+            }
+        }
+    }
+    repositories {
+        maven {
+            name 'deploy'
+            url deployRepoUrl
+            credentials {
+                username = deployRepoUsername
+                password = deployRepoPassword
+            }
+        }
+    }
+}
 
 
